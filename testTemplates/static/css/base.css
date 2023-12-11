@@ -1,0 +1,46 @@
+.container {
+    display: grid
+    grid-template-areas:
+        'header header'
+        'sidebar content';
+    gap: 10px;
+    grid-template-colums: 150px, 1fr;
+    grid-template-rows: 50px, 1fr;
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    align-self: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+
+}
+
+.content {
+    grid-area: content;
+}
+
+.item {
+
+    padding: 5px;
+}
+
+.menu-item {
+    padding: 5px;
+    background: #D9D9D9;
+    border-radius: 13px
+}
+
+
+.menu-item-link {
+    color: black;
+    font-size: 14px;
+    font-family: Playfair Display;
+    font-weight: 600;
+    text-decoration: none;
+}
