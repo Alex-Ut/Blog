@@ -9,7 +9,6 @@ def main_page(request):
 
 
 
-
 def about_page(request):
     title = "О блоге"
     data = {"menu" :MENU, "title": title}

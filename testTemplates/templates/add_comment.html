@@ -3,8 +3,13 @@
 {% block content%}
 <h1 class="titleh1"> {{ title }} </h1>
 
-<form action="{% url 'thanks_page' %}" method="POST">
+<form action="{% url 'thanks_page' %}" method="POST" style="width: 754px; height: 489px; left: 54px; top: 152px; position: absolute;">
     {% csrf_token %}
+    <select name="product">
+        {% for p in products %}
+        <option value="{{p.id}}">{{p.name}}</option>
+        {% endfor %}
+    </select>
     <label for="user_name"></label>
     <input name="user_name" id="user_name">
     <label for="comment"></label>
