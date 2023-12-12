@@ -32,4 +32,7 @@ git clone URL_репозитория
 <p>manage.py runserver</p>
 <p>Скопируйте полученный URL и вставьте в адресную строку вашего браузера</p>
 
+## Administrarion
+логин: admin
+пароль: admin
 <h3>Наслаждайтесь проектом</h3>
