@@ -12,6 +12,7 @@ class ProductComment(models.Model):
     user_name = models.CharField(max_length=40, blank=False)
     comment = models.CharField(max_length=600, blank=False)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    checkbox = models.BooleanField(default=False)
 
     def __str__(self):
         return f'{self.user_name}: {self.comment}'
