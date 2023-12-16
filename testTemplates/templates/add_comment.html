@@ -1,20 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content%}
-<h1 class="titleh1"> {{ title }} </h1>
+  <h1 class="titleh1"> {{ title }} </h1>
 
-<form action="{% url 'thanks_page' %}" method="POST" style="width: 754px; height: 489px; left: 54px; top: 152px; position: absolute;">
+  <form action="{% url 'thanks_page' %}" method="POST" style="width: 754px; height: 489px; left: 54px; top: 152px; position: absolute;">
     {% csrf_token %}
     <select name="product">
-        {% for p in products %}
+      {% for p in products %}
         <option value="{{p.id}}">{{p.name}}</option>
-        {% endfor %}
+      {% endfor %}
     </select>
-    <label for="user_name"></label>
+    <label for="user_name">ИМЯ</label>
     <input name="user_name" id="user_name">
-    <label for="comment"></label>
+    <label for="email">Email</label>
+    <input name="email" id="email">
+    <label for="comment">ОТЗЫВ</label>
     <input name="comment" id="comment">
     <button type="submit">Отправить</button>
-</form>
+  </form>
+
+  <h3 class="allcomments">Все отзывы:</h3>
+  <ul>
+    {% for comment in all_comments %}
+      <li>{{ comment.user_name }}: {{ comment.comment }}</li>
+    {% endfor %}
+  </ul>
 
 {% endblock %}

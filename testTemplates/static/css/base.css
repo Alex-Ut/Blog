@@ -74,3 +74,13 @@
     font-size: 20px;
     word-wrap: break-word;
 }
+
+.allcomments {
+    margin-top: 150px;
+    color: black;
+    font-size: 20px;
+    word-wrap: break-word;
+}
+ul {
+  margin-top: 10px;
+}

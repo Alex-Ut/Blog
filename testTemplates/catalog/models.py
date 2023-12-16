@@ -10,6 +10,7 @@ class Product(models.Model):
 
 class ProductComment(models.Model):
     user_name = models.CharField(max_length=40, blank=False)
+    email = models.CharField(max_length=100, blank=False, default='SOME STRING')
     comment = models.CharField(max_length=600, blank=False)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     checkbox = models.BooleanField(default=False)
